@@ -214,7 +214,6 @@ def CDAN(learning_rate_CDAN, num_experiments, src_x, src_y, tgt_x, tgt_y):
 if __name__ == '__main__':
     source_file = 'M1905.csv'
     tgt_file = 'M1906.csv'
-    # 不对，src和tgt应该用同样的scaler！
     src_x, src_y = feature_load(filename=source_file)  # source
     tgt_x, tgt_y = feature_load(filename=tgt_file)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
